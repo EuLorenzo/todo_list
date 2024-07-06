@@ -1,0 +1,27 @@
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    width: 5.625rem;
+    height: calc(3.375rem - padding - line-height);
+    border-radius: 0.5rem;
+
+    font-family: var(--principal-font);
+    font-size: 1rem;
+    font-weight: 700;
+
+    color: var(--gray-100);
+    background-color: var(--blue-dark);
+    
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    transition: background-color 0.2s;
+}
+
+.button:hover{
+    background-color: var(--blue);
+}
