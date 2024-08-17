@@ -17,6 +17,8 @@ export default function App() {
 
   const [taskName, setTaskName] = useState("")
 
+  const [finishedTasksNumber, setFinishedTasksNumber] = useState<number>(0)
+
   function handleNewTask(e : FormEvent){
     e.preventDefault()
 
@@ -40,16 +42,22 @@ export default function App() {
   }
 
   function handleTaskDelete(key : number){
-    const newTasks = tasks.filter((valor, indice) => indice != key)
+    const newTasks = tasks.filter((_, indice) => indice != key)
     setTasks(newTasks)
   }
 
   function handleTaskFinish(key: number) {
-    const updatedTasks = [...tasks];
-    const finishedTask = {
+    const updatedTasks : TaskDto[] = [...tasks];
+    const finishedTask : TaskDto = {
       ...updatedTasks[key],
       isFinished: !updatedTasks[key].isFinished,
     };
+
+    if(finishedTask.isFinished){
+      setFinishedTasksNumber((state) => state += 1)
+    }else{
+      setFinishedTasksNumber((state) => state -= 1)
+    }
 
     updatedTasks[key] = finishedTask;
     setTasks(updatedTasks);
@@ -73,7 +81,7 @@ export default function App() {
         <div className={styled.tasksMenu}>
           <div className={styled.tasksMenuHeader}>
             <p className={styled.createdTasks}>Tarefas criadas <span>{tasksLenght}</span></p>
-            <p className={styled.finishedTasks}>Concluídas <span>{0} de {tasksLenght}</span></p>
+            <p className={styled.finishedTasks}>Concluídas <span>{finishedTasksNumber} de {tasksLenght}</span></p>
           </div>
 
           {tasks.map((task, key) => {
