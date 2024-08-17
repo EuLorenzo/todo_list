@@ -1,0 +1,91 @@
+.task{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+
+    width: 100%;
+    padding: 16px;
+    height: calc(72px - padding);
+    border-radius: 8px;
+
+    margin-bottom: 12px;
+
+    color: var(--gray-100);
+    background-color: var(--gray-500);
+}
+
+.task input{
+  display: none;
+}
+
+.task input + label::before{
+  content:"";
+  width: 18px;
+  height: 18px;
+  border: 1px solid var(--blue);
+  border-radius: 50%;
+  background: transparent;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 12px;
+  transition: 0.2s;
+}
+
+.task input + label:hover::before{
+  border: 1px solid var(--blue-dark);
+}
+
+.task input:checked + label::before{
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url("../../assets/check.svg");
+  background-color: var(--purple-dark);
+  border: 1px solid var(--purple-dark);
+}
+
+.task input:checked + label:hover::before{
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url("../../assets/check.svg");
+  background-color: var(--purple);
+  border: 1px solid var(--purple);
+}
+
+.taskText{
+  width: 632px;
+}
+
+.taskTextUndelined{
+  width: 632px;
+  text-decoration: line-through;
+  color: var(--gray-300);
+}
+
+.trashContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+}
+
+.trashContainer:hover{
+  background-color: var(--gray-400);
+
+  .trash{
+    color: var(--danger)
+  }
+}
+
+
+
+
+
+
+
+
+
+  
+  

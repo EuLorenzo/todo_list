@@ -11,7 +11,7 @@ main{
   flex-direction: column;
   align-items: center;
 
-  width: 46rem;
+  width: 738px;
   margin: auto;
 }
 
@@ -20,7 +20,59 @@ form{
   flex-direction: row;
   gap: 0.5rem;
 
+  width: 100%;
+
   margin-top: -1.6875rem;
+}
+
+.tasksMenu{
+  width: 100%;
+  margin-top: 64px;
+}
+
+.tasksMenuHeader{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.createdTasks{
+  color: var(--blue);
+  font-weight: 700;
+  font-family: var(--principal-font);
+  font-size: 14px;
+}
+
+.finishedTasks{
+  color: var(--purple);
+  font-weight: 700;
+  font-family: var(--principal-font);
+  font-size: 14px;
+}
+
+.createdTasks span{
+  width: 24px;
+  height: 19px;
+  padding: 2px 8px 2px 8px;
+  
+  color: var(--gray-200);
+  background-color: var(--gray-400);
+
+  opacity: 0px;
+  border-radius: 999px;
+}
+
+.finishedTasks span{
+  width: 24px;
+  height: 19px;
+  padding: 2px 8px 2px 8px;
+
+  color: var(--gray-200);
+  background-color: var(--gray-400);
+
+  opacity: 0px;
+  border-radius: 999px;
 }
 
 

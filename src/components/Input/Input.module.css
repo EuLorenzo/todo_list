@@ -1,5 +1,6 @@
 .input{
-    width: 28.1875rem;
+    /*638 pixels*/
+    width: 39.875rem;
     height: calc(3.375rem - padding - line-height);
     padding: 16px;
     padding-left: 1rem;

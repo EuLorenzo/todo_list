@@ -4,6 +4,7 @@
     justify-content: center;
     gap: 8px;
 
+    /*90px*/
     width: 5.625rem;
     height: calc(3.375rem - padding - line-height);
     border-radius: 0.5rem;
